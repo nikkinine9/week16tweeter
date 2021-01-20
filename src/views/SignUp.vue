@@ -1,22 +1,24 @@
 <template>
   <div>
-    <h1 id="title-text" class="animate__animated animate__lightSpeedInRight">
-      <span id="tweeter">Tweeter</span><br />
-      SIGN UP
+    <h1 id="title-text">
+      <span id="tweeter">Tweeter</span><br>SIGN UP
     </h1>
-    <sign-up-form id="signup-form" />
-    <router-link to="/login" id="login-link"
-      >Have an account? Login Here</router-link
-    >
+    <sign-up-form id="signup-form"></sign-up-form>
+    <router-link to="/login" id="login-link">Have an account? Login Here</router-link>
+    <footer-container></footer-container>
   </div>
 </template>
 
 <script>
 import SignUpForm from "../components/SignUpForm.vue";
+import FooterContainer from "../components/Footer.vue";
+
+
 export default {
   name: "signup-page",
   components: {
     SignUpForm,
+    FooterContainer
   }
 };
 </script>
@@ -48,7 +50,7 @@ export default {
   margin: 5vh;
 }
 #tweeter {
-  font-family: "Press Start 2P", cursive;
+  font-family: "Arimo", cursive;
   color: black;
 }
 </style>

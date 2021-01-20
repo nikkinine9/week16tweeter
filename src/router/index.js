@@ -3,9 +3,10 @@ import VueRouter from "vue-router";
 import SignUpPage from "../views/SignUp.vue";
 import LoginPage from "../views/Login.vue";
 import HomePage from "../views/HomePage.vue";
-// import UserHomePage from "../views/UserHomePage.vue";
-// import ProfilePage from "../views/Profile.vue";
+import UserHomePage from "../views/UserHomePage.vue";
+import ProfilePage from "../views/Profile.vue";
 import UserTweetsPage from "../views/UserTweets.vue";
+import DiscoverPage from "../views/Discover.vue";
 
 Vue.use(VueRouter);
 
@@ -19,16 +20,16 @@ const routes = [{
         name: "login-page",
         component: LoginPage,
     },
-    // {
-    //     path: "/userhome",
-    //     name: "user-homepage",
-    //     component: UserHomePage,
-    // },
-    // {
-    //     path: "/profile",
-    //     name: "user-profile",
-    //     component: ProfilePage,
-    // },
+    {
+        path: "/userhome",
+        name: "user-homepage",
+        component: UserHomePage,
+    },
+    {
+        path: "/profile",
+        name: "user-profile",
+        component: ProfilePage,
+    },
     {
         path: "/userfeed",
         name: "user-tweets-page",
@@ -38,6 +39,11 @@ const routes = [{
         path: "/",
         name: "homepage-page",
         component: HomePage,
+    },
+    {
+        path: "/discover",
+        name: "discover-page",
+        component: DiscoverPage,
     },
 ];
 

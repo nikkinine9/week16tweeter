@@ -1,45 +1,39 @@
 <template>
   <div>
-    <h1
-      id="homepage-title"
-    >
+    <h1 id="homepage-title">
       <i>Tweeter</i>
     </h1>
-    <div
-      id="homepage-container"
-    >
-      <h4>
-        What are other tweeters talking about right now?<br /><br /><br />
-      </h4>
-      <br />
-      <img
-        id="twt-photo-gif"
-        src="../assets/post-tweet.png"
-        alt="Tweeter Social Media Icon GIF"
-      />
-      <br />
-      <br />
+    <div id="homepage-container">
+      <h4>What are other tweeters chirping about?<br><br><br></h4>
+      <br>
+      <img id="twt-photo-gif" src="../assets/post-tweet.png" alt="Tweeter Social Media Icon GIF">
+      <br>
+      <br>
     </div>
     <div id="bottom-container">
       <div id="first-container">
         <button id="homepage-btn">
-          <router-link to="/login">Have an account? Login Here</router-link>
+          <router-link to="/login">Have an account? Nest In Here</router-link>
         </button>
         <button id="homepage-btn">
           <router-link to="/signup">Explore Tweeter</router-link>
         </button>
       </div>
       <div id="last-container">
-        <h3>Let's see what's happening...</h3>
+        <h3>Let's see what's been flying around...</h3>
       </div>
+      <footer-container></footer-container>
     </div>
   </div>
 </template>
 
 <script>
+import FooterContainer from "../components/Footer.vue";
+
 export default {
   name: "homepage-page",
   components: {
+    FooterContainer
   }
 };
 </script>
@@ -65,7 +59,7 @@ a:link {
 }
 #homepage-title {
   text-align: center;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Arimo', cursive;
   color: black;
   margin-top: 5vh;
   font-size: 28px;
@@ -73,7 +67,7 @@ a:link {
   justify-items: center;
 }
 #tweeter {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Arimo', cursive;
   color: black;
   line-height: 1vh;
 }

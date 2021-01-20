@@ -1,29 +1,30 @@
 <template>
   <div id="login-form">
     <h1 id="login-title">
-      <span id="tweeter">Tweeter</span><br />
-      LOGIN
+      <span id="tweeter">Tweeter</span><br>LOGIN
     </h1>
     <p>Email</p>
-    <input type="text" id="email-input" v-model="email" />
+    <input type="text" id="email-input" v-model="email">
     <p>Password</p>
-    <input type="password" id="password-input" v-model="password" />
+    <input type="password" id="password-input" v-model="password">
     <div></div>
     <button id="login-btn" @click="loginUser">Login</button>
     <h3 id="status">{{ loginStatus }}</h3>
-    <router-link to="/signup" id="signup-link"
-      >Not a user? Sign up here</router-link
-    >
+    <router-link to="/signup" id="signup-link">Not a user? Sign up here</router-link>
     <router-link to="/">Home</router-link>
+    <footer-container></footer-container>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import cookies from "vue-cookies";
+import FooterContainer from "../components/Footer.vue";
+
 export default {
   name: "login-page",
   components: {
+     FooterContainer
   },
   data() {
     return {
@@ -128,7 +129,7 @@ input {
   margin: 10px;
 }
 #tweeter {
-  font-family: "Press Start 2P", cursive;
+  font-family: "Arimo", cursive;
   color: black;
 }
 #status {
@@ -140,7 +141,7 @@ input {
     width: 15%;
     margin-bottom: 5vh;
   }
-  #nerdr {
+  #tweeter {
     font-size: 38px;
   }
 }

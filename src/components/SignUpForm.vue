@@ -1,20 +1,15 @@
 <template>
   <div id="signup-form">
     <p>Email</p>
-    <input type="text" id="email-input" v-model="email" />
+    <input type="text" id="email-input" v-model="email">
     <p>Username</p>
-    <input type="text" id="username-input" v-model="username" />
+    <input type="text" id="username-input" v-model="username">
     <p>Password</p>
-    <input type="password" id="password-input" v-model="password" />
+    <input type="password" id="password-input" v-model="password">
     <p>Bio</p>
     <textarea id="bio-input" v-model="bio"></textarea>
     <p>Birthday</p>
-    <input
-      type="text"
-      id="birthday-input"
-      placeholder="yyyy-mm-dd"
-      v-model="birthdate"
-    />
+    <input type="text" id="birthday-input" placeholder="yyyy-mm-dd" v-model="birthdate">
     <button id="signup-btn" @click="signupUser">Sign Up</button>
   </div>
 </template>

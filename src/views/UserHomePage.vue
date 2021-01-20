@@ -2,7 +2,7 @@
   <div>
     <div v-if="loginToken != undefined">
       <nav-bar-section></nav-bar-section>
-      <following-tweets :tweetId="tweet.tweetId"></following-tweets>
+      <following-page></following-page>
       <footer-container></footer-container>
     </div>
     <div id="login-error" v-else>
@@ -13,26 +13,43 @@
 
 <script>
 import cookies from "vue-cookies";
+import FollowingPage from "../components/Following.vue";
 import NavBarSection from "../components/NavBar.vue";
-import ErrorMessage from "../components/404error.vue";
-import FollowingTweets from "../components/FollowingTweets.vue";
 import FooterContainer from "../components/Footer.vue";
+import ErrorMessage from "../components/404error.vue";
 
 export default {
-  name: "user-tweets-page",
+  name: "user-homepage",
   components: {
     NavBarSection,
+    FooterContainer,
+    FollowingPage,
     ErrorMessage,
-    FollowingTweets,
-    FooterContainer
   },
   data() {
     return {
       loginToken: cookies.get("loginToken"),
-      tweet: ""
+      username: cookies.get("userId")
     };
   }
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+//MOBILE
+* {
+  margin: 0;
+  padding: 0;
+}
+a:visited {
+  color: darkblue;
+  font-family: "Arimo", sans-serif;
+}
+a:link {
+  color: darkblue;
+  font-family: "Arimo", sans-serif;
+}
+//TABLET
+@media only screen and (min-width: 670px) {
+}
+</style>
