@@ -2,6 +2,13 @@
   <div>
     <div v-if="loginToken != undefined">
       <nav-bar-section></nav-bar-section>
+      <div v-for="user in users" :key="user.userId">
+        <p>Email: {{ user.email }}</p>
+        <p>Username: {{ user.username }}</p>
+        <p :userBio="user.bio">Bio: {{user.bio }}</p>
+        <p>birthdate: {{ user.birthdate }}</p>
+        <p> userId: {{user.userId}}</p><br>
+      </div>
       <following-page></following-page>
       <footer-container></footer-container>
     </div>
@@ -29,7 +36,11 @@ export default {
   data() {
     return {
       loginToken: cookies.get("loginToken"),
-      username: cookies.get("userId")
+      users: [],
+                bioUpdate: "",
+                password: "",
+                show: false,
+                userBio: ""
     };
   }
 };
